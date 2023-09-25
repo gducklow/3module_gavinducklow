@@ -8,8 +8,12 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+  var characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
   var passwordLength = 10;
+  var password= "";
+ for (var i=0; i < passwordLength; i++) {
+  var randomnumber = ((Math.random) * characters.length) ;
+ } 
 
   passwordText.value = password;
 
