@@ -11,13 +11,14 @@ function writePassword() {
   var characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
   var passwordLength = 10;
   var password= "";
- for (var i=0; i < passwordLength; i++) {
-  var randomnumber = ((Math.random) * characters.length) ;
- } 
-
   passwordText.value = password;
 
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+function generatePassword() {
+  for (var i=0; i <= passwordLength; i++) 
+  var randomnumber = Math.floor(Math.random() * characters.length) ;
+  password += characters.substring(randomnumber,randomnumber +1)
+}
